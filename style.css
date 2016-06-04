@@ -1,0 +1,125 @@
+/* Bagnard, Reglo, YoungSerif*/
+@font-face {
+	font-family: 'Bagnard';
+	src: url('webfonts/Bagnard.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'youngserifregular';
+	src: url('webfonts/YoungSerif-Regular.eot');
+}
+@font-face {
+	font-family: 'youngserifregular';
+	src: url(webfonts/YoungSerif-Regular.woff) format('woff'),
+	url('webfonts/YoungSerif-Regular.ttf') format('truetype'),
+	url('webfonts/YoungSerif-Regular.svg#youngserifregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+body {
+	font-family: "Bagnard";
+	color: black;
+	background-color: white;
+}
+	body.reverse {
+		color: white;
+		background-color: black;	
+	}
+
+#desktop {
+	display: block;
+}
+	#desktop h1 {
+		font-size: 1000%;
+		text-align: center;
+		margin: 60px auto 16px;
+		cursor: pointer;
+	}
+	#desktop aside {
+		visibility: hidden;
+		position: absolute;
+		bottom: 0;
+		font-size: 18px;
+		padding-top: 8px;
+		padding-left: 0;
+
+		-webkit-transform-origin:	0 0;
+		-moz-transform-origin:		0 0;
+		-ms-transform-origin:		0 0;
+		-o-transform-origin:		0 0;
+
+		-webkit-transform:	rotate(-90deg); 
+		-moz-transform:		rotate(-90deg); 
+		-ms-transform:		rotate(-90deg); 
+		-o-transform:		rotate(-90deg); 
+	}
+	#desktop p.about {
+		font-size: 40px;
+		line-height: 1.4em;
+		text-align: center;
+		margin: 0px 120px;
+	}
+		#desktop span.extra {
+			font-family: arial;
+			font-weight: bold;
+			font-size: 94%;
+			cursor: help;
+		}
+		#desktop p.about a {
+			position: relative;
+			display: inline-block;
+			color: lime;
+			cursor: ne-resize;
+		}
+		#desktop p.about a:hover {
+			-webkit-animation: YO 3s infinite;
+			animation: YO 3s infinite;
+		}
+/*		#desktop p.about a:after {
+			content: '';
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			background-color: lime;
+		}
+*/
+@keyframes YO {
+	0%   {transform: rotate(0deg)}
+	30%  {transform: rotate(-12deg)}
+	100% {transform: rotate(360deg)}
+}
+@-webkit-keyframes YO {
+	0%   {transform: rotate(0deg)}
+	30%  {transform: rotate(-12deg)}
+	100% {transform: rotate(360deg)}
+}
+
+
+#mobile {
+	display: none;
+}
+	#mobile h2 {
+		font-size: 500%;
+		text-align: center;
+		margin: 10vh auto;
+		cursor: pointer;
+	}
+
+@media (max-width: 700px) { 
+	#desktop {
+		display: none;
+	}
+	#mobile {
+		display: block;
+	}
+
+}

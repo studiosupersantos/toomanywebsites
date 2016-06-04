@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TOO MANY</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<body>
+
+	<div id="desktop">
+		<h1>TOO MANY</h1>
+
+		<aside class="too-many">I siti bianchi con testo in arial e il menu a sinistra fanno cagare.</aside>
+		<aside class="primo">Che è miseramente fallito.</aside>
+		<aside class="secondo">Sul quale stiamo lavorando.</aside>
+		<aside class="terzo">Che non vinceremo sicuramente.</aside>
+
+
+		<p class="about">Too Many è un collettivo, perché fare un collettivo è TOP. Facciamo i progetti che ci pare, ci piace sperimentare, provare, colorare, trombare, andare al mare. Un progetto che abbiamo provato a fare era sulle <span class="extra primo">insegne luminose</span>, un altro sulle <span class="extra secondo">icone per i cessi</span>, un altro è un <span class="extra terzo">logo very cool</span> per un concorso. Tutta roba figa. A <a href="http://www.simonecutri.it/" target="_blank">Simone</a> piacciono i pretzel col cioccolato di New York, a <a href="http://www.gianlucamonaco.com/" target="_blank">Gianluca</a> le macchine rubate ad Amsterdam, a <a href="" target="_blank">Cecilia</a> in realtà non lo so.</p>
+	</div>
+
+	<div id="mobile">
+		<h2>Non siamo abbastanza fighi per avere un sito responsive</h2>
+	</div>
+
+</body>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#desktop h1, #mobile h2").click(function() {
+			$("body").toggleClass("reverse");
+		}); 
+		$("#desktop h1").mouseover(function() {
+			$("#desktop aside.too-many").css("visibility", "visible");
+		}); 
+		$("#desktop h1").mouseleave(function() {
+			$("#desktop aside.too-many").css("visibility", "hidden");
+		}); 
+		$(".extra.primo").mouseover(function() {
+			$("#desktop aside.primo").css("visibility", "visible");
+		}); 
+		$(".extra.primo").mouseleave(function() {
+			$("#desktop aside.primo").css("visibility", "hidden");
+		}); 
+		$(".extra.secondo").mouseover(function() {
+			$("#desktop aside.secondo").css("visibility", "visible");
+		}); 
+		$(".extra.secondo").mouseleave(function() {
+			$("#desktop aside.secondo").css("visibility", "hidden");
+		}); 
+		$(".extra.terzo").mouseover(function() {
+			$("#desktop aside.terzo").css("visibility", "visible");
+		}); 
+		$(".extra.terzo").mouseleave(function() {
+			$("#desktop aside.terzo").css("visibility", "hidden");
+		}); 
+
+	});
+
+</script>
+
+</html>
