@@ -25,73 +25,52 @@
 }
 body {
 	font-family: "Bagnard";
-	color: black;
+	color: red;
 	background-color: white;
 }
 	body.reverse {
 		color: white;
 		background-color: black;	
 	}
-
 #desktop {
 	display: block;
 }
 	#desktop h1 {
-		font-size: 1000%;
-		text-align: center;
-		margin: 60px auto 16px;
+		font-family: "Bungee Shade", sans-serif;
+		font-weight: normal;
+		font-size: 15vw;
+		text-align: left;
+		margin: -16px 3vw 0px;
 		cursor: pointer;
 	}
-	#desktop aside {
-		visibility: hidden;
-		position: absolute;
-		bottom: 0;
-		font-size: 18px;
-		padding-top: 8px;
-		padding-left: 0;
 
-		-webkit-transform-origin:	0 0;
-		-moz-transform-origin:		0 0;
-		-ms-transform-origin:		0 0;
-		-o-transform-origin:		0 0;
-
-		-webkit-transform:	rotate(-90deg); 
-		-moz-transform:		rotate(-90deg); 
-		-ms-transform:		rotate(-90deg); 
-		-o-transform:		rotate(-90deg); 
-	}
-	#desktop p.about {
-		font-size: 40px;
+	#desktop p.intro-top {
+		font-family: "Work Sans";
+		font-size: 48px;
 		line-height: 1.4em;
-		text-align: center;
-		margin: 0px 120px;
+		text-align: left;
+		margin: 0px 44px;
+		transform: rotate(-4deg);
 	}
-		#desktop span.extra {
-			font-family: arial;
-			font-weight: bold;
-			font-size: 94%;
-			cursor: help;
-		}
-		#desktop p.about a {
-			position: relative;
+	#desktop p.intro-bottom {
+		position: absolute;
+		bottom: 40px;
+		right: 16px;
+		font-family: "Work Sans";
+		font-size: 48px;
+		line-height: 1.4em;
+		text-align: left;
+		margin: 0px 44px;
+		transform: rotate(5deg);
+	}
+		#desktop p.intro-top span, #desktop p.intro-bottom a {
 			display: inline-block;
 			color: lime;
-			cursor: ne-resize;
 		}
-		#desktop p.about a:hover {
+		#desktop p.intro-top span:hover, #desktop p.intro-bottom a:hover {
 			-webkit-animation: YO 3s infinite;
 			animation: YO 3s infinite;
 		}
-/*		#desktop p.about a:after {
-			content: '';
-			position: absolute;
-			bottom: 10px;
-			left: 0;
-			width: 100%;
-			height: 3px;
-			background-color: lime;
-		}
-*/
 @keyframes YO {
 	0%   {transform: rotate(0deg)}
 	30%  {transform: rotate(-12deg)}
@@ -108,13 +87,15 @@ body {
 	display: none;
 }
 	#mobile h2 {
-		font-size: 500%;
+		font-family: "Work Sans";
+		font-size: 12.5vw;
+		line-height: 25vh;
 		text-align: center;
 		margin: 10vh auto;
 		cursor: pointer;
 	}
 
-@media (max-width: 700px) { 
+@media (max-width: 960px) { 
 	#desktop {
 		display: none;
 	}
